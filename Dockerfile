@@ -10,6 +10,8 @@ COPY entrypoint.sh /entrypoint.sh
 
 RUN apk add --no-cache git openssh > /dev/null ; \
     chmod +x /entrypoint.sh
+RUN apt-get -y update 
+RUN apt-get -y install git
 
 # RUN apt-get update \
 #     && apt-get install -y --no-install-recommends curl git openssh-client \
