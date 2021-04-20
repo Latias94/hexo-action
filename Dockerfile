@@ -8,7 +8,7 @@ LABEL maintainer="sma11black <smallblack@outlook.com>"
 
 COPY entrypoint.sh /entrypoint.sh
 
-RUN apk update && apk upgrade && apk add --no-cache git openssh > /dev/null ; \
+RUN apk add --no-cache git openssh > /dev/null ; \
     chmod +x /entrypoint.sh
 
 # RUN apt-get update \
